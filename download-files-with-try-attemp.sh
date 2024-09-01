@@ -64,29 +64,7 @@ while IFS= read -r url; do
   full_file_path="$full_directory_path/$file_name"
 
     # Download the file using wget
-    if wget -q --show-progress -O "$full_file_path" "$encoded_url"; then
-      echo "$counter. Downloaded: $full_file_path" | tee -a "$LOG_FILE"
-    else
-        echo "$counter. retry 1 to download: $encoded_url" | tee -a "$LOG_FILE"
-        sleep 5
-        if wget -q --show-progress -O "$full_file_path" "$encoded_url"; then
-            echo "$counter. Downloaded: $full_file_path" | tee -a "$LOG_FILE"
-        else
-            sleep 5
-            echo "$counter. retry 2 to download: $encoded_url" | tee -a "$LOG_FILE"
-            if wget -q --show-progress -O "$full_file_path" "$encoded_url"; then
-                echo "$counter. Downloaded: $full_file_path" | tee -a "$LOG_FILE"
-            else
-                sleep 5
-                echo "$counter. retry 3 to download: $encoded_url" | tee -a "$LOG_FILE"
-                if wget -q --show-progress -O "$full_file_path" "$encoded_url"; then
-                    echo "$counter. Downloaded: $full_file_path" | tee -a "$LOG_FILE"
-                else
-                    echo "$counter. Failed to download after 3 attemp: $encoded_url" | tee -a "$LOG_FILE"
-                fi
-            fi
-        fi
-    fi
+    download_file 0 $counter $encoded_url
 
   # Increment the counter
   counter=$((counter + 1))
