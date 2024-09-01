@@ -1,17 +1,19 @@
 url_value.txt = list of urls files on cloud storages or others url files
 download.log = log of activity donwload
 
-=============== BEFORE  RUN =====================
+**BEFORE  RUN**
+```
 sudo chmod +x download-files-with-try-attemp.sh
-===============================================
+```
 
 
-=============== HOW TO RUN =====================
+**HOW TO RUN**
+```
 ./download-files-with-try-attemp.sh
-===============================================
+```
 
 
-=========== example log =====================
+**example log**
 ```
 START Download Log - Min 01 Sep 2024 11:04:33 WIB
 =========================
@@ -25,4 +27,11 @@ Elapsed Time (using $SECONDS): 1275 seconds
 0 Hours elapsed.
 
 ```
-=============================================
+
+**example url_value.txt**
+```
+https://storage.googleapis.com/files/presents/Tam-748323.pptx
+https://storage.googleapis.com/files/presents/Tug-ac4f.pptx
+https://storage.googleapis.com/files/presents/Usr-sd6ad45.pptx
+
+```
