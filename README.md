@@ -1,4 +1,5 @@
 url_value.txt = list of urls files on cloud storages or others url files
+
 download.log = log of activity donwload
 
 **BEFORE  RUN**
