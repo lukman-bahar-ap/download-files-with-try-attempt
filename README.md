@@ -1,18 +1,13 @@
 url_value.txt = list of urls files on cloud storages or others url files
 download.log = log of activity donwload
 
-================================================
 =============== BEFORE  RUN =====================
-
 sudo chmod +x download-files-with-try-attemp.sh
-
 ===============================================
 
-================================================
+
 =============== HOW TO RUN =====================
-
 ./download-files-with-try-attemp.sh
-
 ===============================================
 
 
